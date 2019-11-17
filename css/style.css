@@ -9,56 +9,90 @@ img {
 }
 
 div.flex {
-    height: 700px;
-    width: 700px;
+    display: flex;
+    flex-flow: column wrap;
     margin: auto;
     align-items: center;
     justify-content: center;
     align-content: center;
-}
-
-.flex {
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
     position: relative;
+    margin-top: 50px;
+}
+
+.flex1{
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+.flex2{
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    z-index: 2;
+    margin-top: -3vw;
 
 }
 
-.flex__block {
-    height: 300px;
-    width: 300px;
+.flex1__block {
+    height: 18.75vw;
+    width: 18.75vw;
+
+}
+.flex2__block {
+    height: 18.75vw;
+    width: 18.75vw;
 
 }
 
 .red{
-    position: absolute;
-    margin-top: -100px ;
-    margin-left: -100px;
+    margin-left: 1.5vw;
     z-index: 1;
 }
 
 .green {
-    position: absolute;
-    margin-left: 130px;
-    margin-top: -70px;
+    margin-left: -4vw;
+    margin-top: 2vw;
     z-index: 2;
 }
 .blue{
-    position: absolute;
-    margin-left: -110px;
-    margin-top: 120px;
+    margin-top: -3.5vw;
+    margin-left: 1.5vw;
     z-index: 3;
 }
 
 .ye {
-    position: absolute;
-    margin-left: 150px;
-    margin-top: 170px;
-    margin-bottom: 30px;
+    margin-left: -2vw;
+    margin-top: -1vw;
     z-index: 4;
 }
 
+@media all and (max-width: 1000px) {
 
+    div.flex {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .flex1{
+        display: flex;
+        flex-direction: column;
+    margin: 0}
+    .flex2{
+        display: flex;
+        flex-direction: column;
+    margin: 0}
+    .ye {margin: 0;}
+    .green {margin: 0;}
+    .blue{margin: 0;}
+    .red{margin: 0;}
+    .flex1__block {
+        height: 27.5vw;
+        width: 27.5vw;
 
+    }
+    .flex2__block {
+        height: 27.5vw;
+        width: 27.5vw;
 
+    }
+}
